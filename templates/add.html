@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form method="POST" action="{{ url_for('add_contact') }}">
+        {{ form.csrf_token }}
+        <div>
+            {{ form.clastname.label }}
+            {{ form.clastname }}
+        </div>
+        <div>
+            {{ form.cfirstname.label }}
+            {{ form.cfirstname }}
+        </div>
+        <div>
+            {{ form.caddress1.label }}
+            {{ form.caddress1 }}
+        </div>
+        <div>
+            {{ form.caddress2.label }}
+            {{ form.caddress2 }}
+        </div>
+        <div>
+            {{ form.ccity.label }}
+            {{ form.ccity }}
+        </div>
+        <div>
+            {{ form.cstate.label }}
+            {{ form.cstate }}
+        </div>
+        <div>
+            {{ form.czip.label }}
+            {{ form.czip }}
+        </div>
+        <div>
+            {{ form.chomearea.label }}
+            {{ form.chomearea }}
+        </div>
+        <div>
+            {{ form.chomephone.label }}
+            {{ form.chomephone }}
+        </div>
+        <div>
+            {{ form.dbday.label }}
+            {{ form.dbday }}
+        </div>
+        <div>
+            {{ form.cemail.label }}
+            {{ form.cemail }}
+        </div>
+        <div>
+            {{ form.ccellarea.label }}
+            {{ form.ccellarea }}
+        </div>
+        <div>
+            {{ form.ccellphone.label }}
+            {{ form.ccellphone}}
+        </div>
+        
+        
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

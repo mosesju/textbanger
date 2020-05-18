@@ -1,18 +1,28 @@
-from airtable import Airtable
-
-def get(base_key, table_name, api_key):
+def get_all(at):
     """
     Gets all data from an airtable
 
     Parameters
     ----------
-    base_key: Key for the base
-    table_name: Name of the Table
-    api_key: Airtable API Key
+    at: airtable instance
 
     Returns
     -------
     list: of JSON formatted objects that include all data from table
     """
-    at = Airtable(base_key, table_name, api_key)
     return at.get_all()
+
+def get_fields(at, fields):
+    """
+    Gets all data from an airtable
+
+    Parameters
+    ----------
+    at: airtable instance
+    fields: the fields which are you going to query
+
+    Returns
+    -------
+    list: of JSON formatted objects that include all data from table
+    """
+    return at.get_all(fields=fields)

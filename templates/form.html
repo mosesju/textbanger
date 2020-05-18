@@ -3,15 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <title>{{ title }}</title>
 </head>
 <body>
+    <nav class="navbar is-fixed-top" role="navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+        </div>
+        <div id="navbarBasic" class="navbar-menu">
+            <div class="navbar-item"><a href="{{ url_for('send_text') }}">Send a Text</a></div>
+            <div class="navbar-item"><a href="{{ url_for('add_contact') }}">Add Contact</a></div>
+            <div class="navbar-item"><a href="{{ url_for('home') }}">Home</a></div>
+
+        </div>
+    </nav>
     <form method="POST" action="{{ url_for('send-text') }}">
         {{ form.csrf_token }}
         {{ form.message.label }}
-        {{ form.message }}
+        {{ form.message(class="input") }}
         
-        <input type="submit" value="submit">
+        <input type="submit" value="submit" class="button is-primary">
     </form>
+    <script src="/static/javascript/navbar.js"></script>
 </body>
 </html>

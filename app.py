@@ -45,7 +45,17 @@ def sent():
 @app.route('/add-contact')
 def add_contact():
     form = ContactForm()
+    # if request.method == 'POST' and form.validate_on_submit():
+
     return render_template('add.html', form=form)
+
+@app.route('/listen', methods=['GET', 'POST'])
+def stop_listener():
+    """
+    Respond to incoming STOP message
+    """
+    resp = twiml.Response()
+    
 
 if __name__ == "__main__":
     app.run(debug=True)

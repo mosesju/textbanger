@@ -1,3 +1,5 @@
+// @import url('')
+
 $camel: #e1b382;
 $camelShadow: #c89666;
 $nightBlue: #2d545e;
@@ -8,8 +10,17 @@ $primary: $nightBlue;
 html{
     background-color: $camel;
 }
+html {
+    font-size: 20px;
+    // @include tablet {
+    //   font-size: 16px;
+    // }
+    // @include desktop {
+    //   font-size: 20px;
+    // }
+  }
 .navbar {
-    background-color: $nightBlueShadow;
+    background-color: $nightBlue;
     color: $camelShadow;
 }
 a {
@@ -25,8 +36,12 @@ h1 {
     color: $nightBlue;
 }
 input .button{
-    color: $nightBlue;
+    color: $camel;
+    background-color: $nightBlue;
 }
 button {
     background-color: $nightBlue;
+}
+.home-content:hover {
+    color:$lightAccent;
 }

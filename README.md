@@ -6,7 +6,7 @@ This project is going to send text messages to clients stored in an airtable dat
 - Twilio - Sending SMS
 - Airtable - Database
 - Bulma -CSS Framework
-- SASS - CSS Compiler
+- SASS - CSS Preprocessor
 
 ## Extensions
 I will secure it with a password for the users and save messages that have been sent. Also give it some style and stuff would be smart

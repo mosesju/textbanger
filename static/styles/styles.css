@@ -2,8 +2,12 @@ html {
   background-color: #e1b382;
 }
 
+html {
+  font-size: 20px;
+}
+
 .navbar {
-  background-color: #12343b;
+  background-color: #2d545e;
   color: #c89666;
 }
 
@@ -24,10 +28,15 @@ h1 {
 }
 
 input .button {
-  color: #2d545e;
+  color: #e1b382;
+  background-color: #2d545e;
 }
 
 button {
   background-color: #2d545e;
+}
+
+.home-content:hover {
+  color: #fff9d9;
 }
 /*# sourceMappingURL=styles.css.map */

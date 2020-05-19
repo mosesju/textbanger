@@ -9,37 +9,100 @@
     <title>Home</title>
 </head>
 <body>
-    <nav class="navbar is-fixed-top" role="navigation">
-        <div class="navbar-brand">
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-              </a>
-        </div>
-        <div id="navbarBasic" class="navbar-menu">
-            <div class="navbar-item"><a href="{{ url_for('send_text') }}">Send a Text</a></div>
-            <div class="navbar-item"><a href="{{ url_for('add_contact') }}">Add Contact</a></div>
-            <div class="navbar-item"><a href="{{ url_for('home') }}">Home</a></div>
+    <div class="container">
+        <div class="container">
+            <nav class="navbar is-fixed-top" role="navigation">
+                <div class="navbar-brand">
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                      </a>
+                </div>
+                <div id="navbarBasic" class="navbar-menu">
+                    <div class="navbar-item"><a href="{{ url_for('send_text') }}">Send a Text</a></div>
+                    <div class="navbar-item"><a href="{{ url_for('add_contact') }}">Add Contact</a></div>
+                    <div class="navbar-item"><a href="{{ url_for('home') }}">Home</a></div>
+        
+                </div>
+            </nav>
+            <br><br><br>
+            <div class="hero is-full-height">
+                <div class="hero-body">
+                    <div class="container">
+                        <div class="columns">
+                            <div class="column">
+                                <h1 class="title is-size-1">Basic Text Message Service</h1>
+                                <h2 class="subtitle is-size-3">
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column"></div>
+                <div class="card column">
+                    <!-- <div class="card-image">
+        
+                    </div> -->
+                    <div class="card-content">
+                        <div class="media-content">
+                            <!-- Link this -->
+                            <p class="title">Add Contact</p>
+                            <p class="subtitle">Add a contact to your list</p>
+                        </div>
+                        <div class="content">
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="card column">
+                    <!-- <div class="card-image">
+        
+                    </div> -->
+                    <div class="card-content">
+                        <div class="media-content">
+                            <!-- Link this -->
+                            <p class="title">Send a text</p>
+                            <p class="subtitle">Send a text to your list</p>
+                        </div>
+                        <div class="content">
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="column"></div>
 
+            </div>
+            <div class="home-content container">
+                <p>This project is going to send text messages to clients stored in an airtable database. To be used by a fitness client looking to expand they're marketing reach into different areas. Since it is an MVP I decidied to use really simple tools. For example my backend was written using Flask. No authentication or anything, just like if you have the link you can send texts. Currently uses Airtable for DB.</p>
+                <h2 class="is-size-2">Tools</h2>
+                <ul>
+                    <li class="is-size-5">
+                        <a href="https://flask.palletsprojects.com/en/1.1.x/"target="_blank"><i class="fa fa-route is-large"></i> Flask - Routing</a>
+                    </li>
+                    <li class="is-size-5">
+                        <a href="https://flask.palletsprojects.com/en/1.1.x/patterns/wtforms/" target="_blank"><i class="fas fa-align-justify"></i> Flask WTForms - Forms</a>
+                    </li>
+                    <li class="is-size-5">
+                        <a href="https://www.twilio.com/" target="_blank"><i class="fas fa-comment-alt"></i> Twilio - Sending SMS</a>
+                    </li>
+                    <li class="is-size-5">
+                        <a href="https://airtable.com/" target="_blank"><i class="fas fa-database"></i> Airtable - Database</a>
+                    </li>
+                    <li class="is-size-5">
+                        <a href="https://bulma.io/" target="_blank"><i class="fab fa-css3"></i> Bulma - CSS Framework</a>
+                    </li>
+                    <li class="is-size-5">
+                        <a href="https://sass-lang.com/" target="_blank"><i class="fab fa-sass"></i> SASS - CSS Preprocessing</a>
+                    </li>
+                </ul>
+                <h1 class="is-size-2">Extensions</h1>
+                <p>I will secure it with a password for the users and save messages that have been sent. Also give it some style and stuff would be smart
+                Make it a Django project so I can add authentication and stuff.</p>
+            </div>
         </div>
-    </nav>
-    <br><br><br>
-    <div class="home-content container">
-        <h1 class="is-large">Basic Text Message Service</h1>
-        <p>This project is going to send text messages to clients stored in an airtable database. To be used by a fitness client looking to expand they&#39;re marketing reach into different areas. Since it is an MVP I decidied to use really simple tools. For example my backend was written using Flask. No authentication or anything, just like if you have the link you can send texts. Currently uses Airtable for DB</p>
-        <h1 id="tools" class="is-large">Tools</h1>
-        <ul>
-            <li><i class="fa fa-route"></i> Flask - Routing</li>
-            <li><i class="fas fa-align-justify"></i> Flask WTForms - Forms</li>
-            <li><i class="fas fa-comment-alt"></i> Twilio - Sending SMS</li>
-            <li><i class="fas fa-database"></i> Airtable - Database</li>
-            <li><i class="fab fa-css3"></i> Bulma - CSS Framework</li>
-            <li><i class="fab fa-sass"></i> SASS - CSS Preprocessing</li>
-        </ul>
-        <h1 class="is-large">Extensions</h1>
-        <p>I will secure it with a password for the users and save messages that have been sent. Also give it some style and stuff would be smart
-        Make it a Django project so I can add authentication and stuff.</p>
     </div>
 
     <script src="/static/javascript/navbar.js"></script>

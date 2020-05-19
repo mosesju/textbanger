@@ -1,25 +1,33 @@
 html {
-  background-color: #e1b382;
+  background-color: #c89666;
 }
 
 html {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .navbar {
   background-color: #2d545e;
-  color: #c89666;
+  color: #e1b382;
+}
+
+p {
+  color: #2d545e;
 }
 
 a {
-  color: #c89666;
+  color: #12343b;
 }
 
 a:hover {
   color: #fff9d9;
 }
 
-body {
+.navbar a {
+  color: #e1b382;
+}
+
+div.container {
   background-color: #e1b382;
 }
 
@@ -36,7 +44,15 @@ button {
   background-color: #2d545e;
 }
 
-.home-content:hover {
-  color: #fff9d9;
+.hero {
+  background-color: #e1b382;
+}
+
+.card {
+  background-color: #2d545e;
+}
+
+.card p {
+  color: #e1b382;
 }
 /*# sourceMappingURL=styles.css.map */

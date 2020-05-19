@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/static/styles/styles.css">
     <title>{{ title }}</title>
 </head>
@@ -34,10 +35,20 @@
             <div class="control">
                 {{ form.message(class="input") }}
             </div>
-            <p class="help">160 Character Limit</p>
+            <p id="count" class="help"></p>
+            <p class="help">Character Count</p>
         </div>        
         <input type="submit" value="Send Message" class="button">
     </form>
     <script src="/static/javascript/navbar.js"></script>
+    <script>
+        $('input').keyup(updateCount);
+        $('input').keydown(updateCount);
+
+        function updateCount(){
+            var cs = $(this).val().length;
+            $('#count').text(cs);
+        }
+    </script>
 </body>
 </html>

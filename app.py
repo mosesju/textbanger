@@ -7,6 +7,7 @@ from sms import send
 from forms import TextForm, ContactForm
 from db.get import get_fields, get_all
 from db.insert import insert
+import datetime
 
 
 app = Flask(__name__, instance_relative_config=False)
@@ -31,15 +32,21 @@ def send_text():
             area = str(contact['fields']['ccellarea'])
             phone = str(contact['fields']['ccellphone'])
             recipient = '+1' + area + phone
-            print(recipient)
-            # send(message, recipient, client)
-        return render_template('sent.html', message=message)
+            send(message, recipient, client)
+        at_messages = Airtable(BaseKey(), Messages(), ApiKey())
+        sent_date = datetime.datetime.now()
+        sent = {
+            'message': message,
+            'sent_date': str(sent_date)
+        }
+        insert(at_messages, sent)
+        return render_template('sent.html',title=title, message=message)
     return render_template('text.html', form = form, title = title)
 
 @app.route('/sent')
 def sent():
     title = "Sent Text"
-    return render_template('sent.html', title = title)
+    return render_template('sent.html', title = title, message=message)
 
 # This needs to add a record to airtable
 @app.route('/add-contact', methods = ['GET', 'POST'])

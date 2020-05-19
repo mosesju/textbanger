@@ -1,0 +1,29 @@
+html {
+  background-color: #e1b382;
+}
+
+.navbar {
+  background-color: #12343b;
+  color: #c89666;
+}
+
+a {
+  color: #c89666;
+}
+
+a:hover {
+  color: #fff9d9;
+}
+
+body {
+  background-color: #e1b382;
+}
+
+h1 {
+  color: #2d545e;
+}
+
+input .button {
+  color: #2d545e;
+}
+/*# sourceMappingURL=styles.css.map */

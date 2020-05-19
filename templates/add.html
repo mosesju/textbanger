@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="/static/styles/styles.css">
     <title>{{ title }}</title>
 </head>
 <body>
@@ -25,59 +25,97 @@
         </div>
     </nav>
     <br><br><br>
-    <form method="POST" action="{{ url_for('add_contact') }}">
+    <form method="POST" action="{{ url_for('add_contact') }}" class="container">
         {{ form.csrf_token }}
-        <div>
-            {{ form.clastname.label }}
-            {{ form.clastname(class="input") }}
+        <div class="columns">
+            <div class="column">            
+                <label class="label">{{ form.cfirstname.label }}</label>
+                <div class="control">
+                    {{ form.cfirstname(class="input") }}
+                </div>
+            </div>
+            <div class="column">
+                <label class="label">{{ form.clastname.label }}</label>
+                <div class="control">
+                    {{ form.clastname(class="input") }}
+                </div>
+            </div>
         </div>
-        <div>
-            {{ form.cfirstname.label }}
-            {{ form.cfirstname(class="input") }}
+        <div class="columns">
+            <div class="column">
+                <label class="label">{{ form.caddress1.label }}</label>
+                <div class="control">
+                    {{ form.caddress1(class="input") }}
+                </div>
+            </div>
+            <div class="column">
+                <label class="label">{{ form.caddress2.label }}</label>
+                <div class="control">
+                    {{ form.caddress2(class="input") }}
+                </div>
+            </div>
         </div>
-        <div>
-            {{ form.caddress1.label }}
-            {{ form.caddress1(class="input") }}
+        <div class="columns">
+            <div class="column">
+                <label class="label">{{ form.ccity.label }}</label>
+                <div class="control">
+                    {{ form.ccity(class="input") }}
+                </div>
+            </div>
+            <div class="column">
+                <label class="label">{{ form.cstate.label }}</label>
+                <div class="control">
+                    {{ form.cstate(class="input") }}
+                </div>
+            </div>
+            <div class="column">
+                <label class="label">{{ form.czip.label }}</label>
+                <div class="control">
+                    {{ form.czip(class="input") }}
+                </div>
+            </div>
         </div>
-        <div>
-            {{ form.caddress2.label }}
-            {{ form.caddress2(class="input") }}
+        <div class="columns">
+            <div class="column">
+                <label class="label">{{ form.chomearea.label }}</label>
+                <div class="control">
+                    {{ form.chomearea(class="input") }}
+                </div>
+            </div>
+            <div class="column">
+                <label class="label">{{ form.chomephone.label }}</label>
+                <div class="control">
+                    {{ form.chomephone(class="input") }}
+                </div>
+            </div>
         </div>
-        <div>
-            {{ form.ccity.label }}
-            {{ form.ccity(class="input") }}
+        <div class="columns">
+            <div class="column">
+                <label class="label">{{ form.dbday.label }}</label>
+                <div class="control">
+                    {{ form.dbday(class="input") }}
+                </div>
+            </div>
+            <div class="column">
+                <label class="label">{{ form.cemail.label }}</label>
+                <div class="control">
+                    {{ form.cemail(class="input") }}
+                </div>
+            </div>
         </div>
-        <div>
-            {{ form.cstate.label }}
-            {{ form.cstate(class="input") }}
-        </div>
-        <div>
-            {{ form.czip.label }}
-            {{ form.czip(class="input") }}
-        </div>
-        <div>
-            {{ form.chomearea.label }}
-            {{ form.chomearea(class="input") }}
-        </div>
-        <div>
-            {{ form.chomephone.label }}
-            {{ form.chomephone(class="input") }}
-        </div>
-        <div>
-            {{ form.dbday.label }}
-            {{ form.dbday(class="input") }}
-        </div>
-        <div>
-            {{ form.cemail.label }}
-            {{ form.cemail(class="input") }}
-        </div>
-        <div>
-            {{ form.ccellarea.label }}
-            {{ form.ccellarea(class="input") }}
-        </div>
-        <div>
-            {{ form.ccellphone.label }}
-            {{ form.ccellphone(class="input") }}
+        <div class="columns">
+            <div class="column">
+                <label class="label">{{ form.ccellarea.label }}</label>
+                <div class="control">
+                    {{ form.ccellarea(class="input") }}
+                </div>
+            </div>
+            <div class="column">
+                <label class="label">{{ form.ccellphone.label }}</label>
+                <div class="control">
+                    {{ form.ccellphone(class="input") }}
+                </div>
+            </div>
         </div>
         
         

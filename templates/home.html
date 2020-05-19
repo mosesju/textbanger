@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="/static/styles/styles.css">
     <title>Home</title>
 </head>
 <body>
@@ -20,10 +20,11 @@
         <div id="navbarBasic" class="navbar-menu">
             <div class="navbar-item"><a href="{{ url_for('send_text') }}">Send a Text</a></div>
             <div class="navbar-item"><a href="{{ url_for('add_contact') }}">Add Contact</a></div>
-            <div class="navbar-item"><a href="{{ url_for('home') }}">Add Contact</a></div>
+            <div class="navbar-item"><a href="{{ url_for('home') }}">Home</a></div>
 
         </div>
     </nav>
+    <br><br><br>
     <h1>Crazy Basic Twilio implementation</h1>
     <script src="/static/javascript/navbar.js"></script>
 </body>

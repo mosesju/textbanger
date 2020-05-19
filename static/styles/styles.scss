@@ -1,0 +1,29 @@
+$camel: #e1b382;
+$camelShadow: #c89666;
+$nightBlue: #2d545e;
+$nightBlueShadow: #12343b;
+$lightAccent: #fff9d9;
+
+$primary: $nightBlue;
+html{
+    background-color: $camel;
+}
+.navbar {
+    background-color: $nightBlueShadow;
+    color: $camelShadow;
+}
+a {
+    color: $camelShadow;
+}
+a:hover{
+    color: $lightAccent;
+}
+body {
+    background-color: $camel;
+}
+h1 {
+    color: $nightBlue;
+}
+input .button{
+    color: $nightBlue;
+}
